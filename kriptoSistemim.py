@@ -1,0 +1,37 @@
+karakterler = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+            'A', 'B', 'C', 'Ç', 'D', 'E', 'F', 'G', 'Ğ', 'H', 'I', 'İ','J', 'K','L', 'M', 'N', 'O', 'Ö', 'P', 'Q', 'R',
+           'S', 'Ş','T', 'U', 'Ü', 'V', 'W', 'X','Y', 'Z',
+            'a', 'b', 'c', 'ç', 'd', 'e', 'f', 'g', 'ğ', 'h', 'ı', 'i','j', 'k', 'l', 'm', 'n', 'o', 'ö', 'p', 'q', 'r',
+           's', 'ş','t', 'u', 'ü', 'v', 'w', 'x', 'y', 'z',
+            ' ', '-','+', '/', '*','>','<','£',"#",'$','{','[',']','}','´´','.',',',':',';','?','!','^','=',"_",'%','&',
+           '(',')']
+sifreliPaketler = ["xyz", "hXa", "mN:", "<>*", "#24", "Fgx", "012", "9:;", "*1d", "+As", "TiQ",
+                  "/*2", ">£#","{[]", "{[>", "758", ">gS", "jxa", "x9<", ",hj", "Fc1", "2c=",
+                  "345", "mQn","sŞt", "eFg", "2tQ", "-*-", "2X+", "-24", "!=*", "?!1", ">£1",
+                  "185", "Iıi","-2!", "trk","tQm", "1Ş2", "?11", "!£$", "a#>", "21$", "79{",
+                  "asd", "+15", "fc1", "bQY<",">£X", "74P","42K", "{[*", "<>d", "!JK", "XĞT",
+                  "4Xa", "^+1", "27x", "gGğ", "£>3", "(3/","!1#", "2xJ","ü1a", "Q^2", "?_?",
+                  "-1a", "xQy", "Ğ1X", "F!#", "^%1", "3ğQ", "Z!£", "+^.","!42", "öM2", "CG1",
+                  "52/", "1s5","1)&","4DS","lcs","235","Gsf","50G","Ndc","Ahe","%^2","+12",
+                  "41m","432","öcd","%^3",")&2","-^+","?_1","4şx","%22","=2?","412","l+s","789"]
+
+print("FURKAN ÇİMİLİ 20191132039")
+
+yapılacak = input("Şifrelemek için 'sifre' veya '1' Şifre çözmek için 'coz' veya '2' yazınız.")
+if yapılacak=="sifre" or yapılacak=="1":
+    giris =input("Şifrelemek istediğiniz metin : ")
+    for i in range(0,len(giris)):
+        for x in range(0,len(karakterler)):
+            if (giris[i] == karakterler[x]):
+                print(sifreliPaketler[x],end="")
+
+
+elif yapılacak=="coz" or yapılacak=="2":
+    karakter=3
+    coz = input("Çözülecek veriyi giriniz:")
+    for i in range(0,len(coz),3):
+        for x in range(0,len(sifreliPaketler)):
+            if (coz[i:karakter] == sifreliPaketler[x]):
+                karakter+=3
+                print(karakterler[x],end="")
+
